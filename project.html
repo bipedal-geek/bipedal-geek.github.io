@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta charset="utf-8">
+      <title>GEEKBOT</title>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <meta name="description" content="Geek Robot : Gesture Controlled Robot with Autonomous Mapping.">
+      <meta name="keywords" content="arduino, slams, wavefront algorithem, gesture, accelerometer, information technology unviersity, electronics, emebedded system, robotics">
+      <meta name="author" content="Linear Circuit Analysis Project">
+      <link rel="publisher" href="https://plus.google.com/+UsamaAbid4/">
+
+      <!-- Le styles -->
+      <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+      <!--[if IE 7]>
+      <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css">
+      <![endif]-->
+
+      <link href="assets/css/bootplus.css" rel="stylesheet">
+      <link href="assets/css/bootplus-responsive.css" rel="stylesheet">
+
+      <link href="assets/css/docs.css" rel="stylesheet">
+      <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+      <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+      <!--[if lt IE 9]>
+        <script src="assets/js/html5shiv.js"></script>
+      <![endif]-->
+
+      <!-- Le fav and touch icons -->
+      <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="assets/ico/favicon.png">
+
+      <script type="text/javascript">
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-60010264-1', 'auto');
+		ga('send', 'pageview');
+	 </script>
+	 <script src="./assets/processing.min.js"></script>
+  </head>
+
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+    <!-- Navbar
+    ================================================== -->
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="./index.html">GEEKBOT</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="">
+                <a href="./index.html">Home</a>
+              </li>
+              <li class="">
+                <a href="./about.html">About</a>
+              </li>
+              <li class="active">
+                <a href="./project.html">Project</a>
+              </li>
+              <li class="">
+                <a href="./p-gallery.html">Project Gallery</a>
+              </li>
+              <li class="">
+                <a href="./ack.html">Acknowledgements</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- Subhead
+================================================== -->
+<header class="jumbotron subhead masthead" id="overview">
+  <div class="container">
+    <h1> Project</h1>
+    <p class="lead">Project Technical description, Code, Schematics, Simulations & files/attachments.</p>
+  </div>
+</header>
+
+  <div class="container">
+
+    <!-- Docs nav
+    ================================================== -->
+    <div class="row">
+      <div class="span3 bs-docs-sidebar">
+        <ul class="nav nav-list bs-docs-sidenav">
+		<li class="nav-header" style="text-align:center">Project Data</li>
+          <li><a href="#pj-des"> Description</a></li>
+          <li><a href="#schematics"> Schematics</a></li>
+          <li><a href="#code"> Code</a></li>
+          <li><a href="#simulation"> Simulation</a></li>
+          <li><a href="#files"> Files/Attachments</a></li>
+        </ul>
+      </div>
+      <div class="span9">
+
+
+
+        <!-- Global Bootplus settings
+        ================================================== -->
+        <section id="pj-des">
+          <div class="page-header">
+            <h1><b>Project Description</b></h1>
+          </div>
+
+          <h3><b>Purpose</b></h3>
+          <p>Our purpose to build this robot to work on bipedal robotic locomotion and also statically balanced robot.</p>
+		  <ul>
+			<li><p><b>Bi-Pedal Robotic Locomotion</b></p></li>
+			<li>Bi-pedal robotic locomotion is one of the most difficult tasks to deal in robotics. That’s why we are able to see 4-wheel robots. So we built this robot to add our work in this field. And provide a easy DIY platform to work further on such robots.</li>
+			<li><p><b>New Robotics Spectrum </b></p></li>
+			<li>We used the idea of baby walking i.e. static balancing and developed a easy DIY platform. This is to change the spectrum of robotics in Pakistan. As there are many problems that can’t be solved without bi-pedal robots like walking up stairs.</li>
+		  </ul>
+
+          <h3><b>Required Components</b></h3>
+          <p>Following is the list of components needed for this project:</p>
+          <ul>
+            <li>3D printed parts </li>
+            <li>Ultrasonic sensor (HC-SR04) </li>
+            <li>Servo motors MG996R (10KG Torque) </li>
+            <li>Arduino UNO with Custom build motor controller</li>
+            <li>7.4V Lipo batteries </li>
+            <li>A lot of jumper wires </li>
+			<li> Wire cutter/stripper </li>
+          </ul>
+          <h3><b>Description</b></h3>
+          <p>  Working of this robot is differentiated into three main parts; Joint Actuation using muscle, movement algorithm and static balancing. The robot walks using 8 Servos. These servos provide 8 degrees of freedom to robot. 
+				Joint muscle actuation is done using servo motor which work on the movement data extracted from spline interpolation. Spline interpolation is applied on the already provided data sets for DOF of each joint along with apex and step length.
+				We have developed a decade counter which controls 8 servo motors synchronously. This shield helps to control all these servos from two aurdino PWM pins. </p>
+		  <ul>
+            <li>We have statically balanced robot by applying spline interpolation for motion.</li>
+            <li>We actuated motion using high torque servo motors.</li>
+            <li>Robot has a vertical clearance apex of 0.68" and a step length of 0.85“.</li>
+            <li>All motors are controlled using self-designed Decade Counter based servos controller. Which helps to control all motors with one signal pin.</li>
+            <li>Robot can navigate autonomously and avoid obstacle using ultrasonic sensor.</li>
+          </ul>
+	
+
+        </section>
+
+
+
+
+        <!-- Grid system
+        ================================================== -->
+        <section id="schematics">
+          <div class="page-header">
+            <h1>Schematics</h1>
+          </div>
+		 <h3>GEEKBOT- Bipedal Robot</h3>
+         <img class="img-rounded" alt="Gestur Control" src="./assets/img/ges.png" >
+		<h3>Drive Assembly</h3>
+		<img class="img-rounded" alt="Gestur Control" src="./assets/img/robo.png"">
+        </section>
+
+
+
+        <!-- Fluid grid system
+        ================================================== -->
+        <section id="code">
+          <div class="page-header">
+            <h1>Project Code</h1>
+          </div>
+          <h3>Walking and Obstacle Avoidance Code</h3>
+          <p>This code contains walking code for pre defined step frames using<code> Arduino UNO </code> & <code>4017 Based Custom Designed Servo Controller.</code>. </p>
+<pre class="prettyprint linenums">
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+void loop()
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+{
+  //this is the main update loop for the microcontroller
+  
+  //update the current action
+  UpdateAction();
+  
+  //get the frame from the current action  
+  int frame[numberOfServos];
+  action->GetCurrentFrame(frame);
+  
+  //set the servo positions for this frame number
+  SetServoPositions(frame);                    
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+void SetServoPositions(int* frame)
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+{
+  //update each servo
+  for (int servo = 0; servo < numberOfServos; servo++)
+  {   
+    //the servo angle used is the linear interpolation between the two 
+    float servoAngle = (frame[servo] + calibration[servo])/100.0f;
+     
+    // the servo control shield commands the servos via pulse width modulations, not angles
+    // the PWMs range from 1000 (equal to 0 degrees) to 2000 (equal to 120 degrees)
+    // so the servo angle needs to be converted to the corresponding PWM range.
+    int pwm = (int)(servoAngle/120.0* (float)(maximumServoShieldPosition - minimumServoShieldPosition)) + minimumServoShieldPosition;
+      
+    //Set PWM for the servo shield to send out to the servo
+    servos.setposition(servo, pwm);       
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+bool ObstacleInPath()
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+{
+  //initialize the result
+  boolean foundObstacle = true;
+ 
+  //measure the distance 
+  distance = MeasureDistance();
+  
+  //ignore error readings 
+  if(distance == 0)
+    distance = lastDistance;
+
+  //make sure the object was observed at least twice in a row (high frequency filter)
+  if(distance > 5 && lastDistance > 5)    
+    foundObstacle = false;
+        
+  //remember the distance 
+  lastDistance = distance;
+    
+  //return the result
+  return foundObstacle;
+}
+</pre>
+<p><button type="button" class="btn btn-info" href="./assets/bot/bot.ino">Download Complete Code</button></p>
+
+          <h3>Walk Frames of Robot</h3>
+          <p>This following code is the walk frames of robot and shows us its matrix for <code> Custom Build</code> & <code>Servo Shield</code>. </p>
+<pre class="prettyprint linenums">
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Action Frames
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Joints positions are in degrees * 100 (home position is 60 degrees)
+/////////////////////////////////////////////
+//JOINT INDEXES
+// 0 right ankle
+// 1 right lower leg
+// 2 right upper leg
+// 3 right hip
+// 4 left ankle
+// 5 left lower leg
+// 6 left upper leg
+// 7 left hip
+/////////////////////////////////////////////
+int walkFrames[10][8] =
+{
+                      {6900, 8100, 8700, 6450, 9599, 8400, 7500, 8700 },
+                      {3000, 7500, 9750, 3299, 6000, 8100, 6600, 6000 },
+                      {1200, 5400, 8400, 1800, 4500, 8100, 5700, 4500 },
+                      {900, 4800, 6600, 3600, 4200, 7200, 6300, 4500 },
+                      {1800, 5100, 5100, 5700, 4800, 5100, 5400, 6300 },
+                      {2500, 3600, 4500, 3300, 5100, 3900, 3300, 5600 },
+                      {6000, 3900, 5400, 6000, 9000, 4500, 2300, 8800 },
+                      {7500, 3900, 6300, 7500, 10800, 6600, 3600, 10200 },
+                      {7800, 4800, 5700, 7500, 11100, 7200, 5400, 8400 },
+                      {7200, 6900, 6600, 5700, 10200, 6900, 6900, 6300 }
+  
+};
+
+int turnFrames[7][8] = {
+                      { 6000,  6000,  6000,  6000,  6000,  6000,  6000,  6000 },
+                      { 5550,  5700,  7500,  5700,  6300,  6300,  5100,  6600 },
+                      { 3299,  5700,  7500,  4500,  6000,  6300,  5100,  6600 },
+                      { 1500,  5700,  7500,  3600,  5700,  6600,  3900,  5400 },
+                      {  600,  5700,  7500,  3600,  4500,  6900,  4200,  5100 },
+                      {  600,  5700,  6300,   600,  2700,  5400,  1800,  3000 },
+                      { 6000,  6000,  6000,  6000,  6000,  6000,  6000,  6000 }
+};
+</pre>
+<p><button type="button" class="btn btn-info" href="./assets/map_bot/map_bot.ino">Download Complete Code</button></p>
+
+        </section>
+
+
+
+
+        <!-- simulation (Default and fluid)
+        ================================================== -->
+        <section id="simulation">
+          <div class="page-header">
+            <h1>Simulation</h1>
+			
+          </div>
+			<img class="img-rounded" alt="Gestur Control" src="./assets/img/walk.gif" >
+
+        </section>
+
+
+
+
+        <!-- responsive design
+        ================================================== -->
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+    <!-- Footer
+    ================================================== -->
+    <footer class="footer">
+      <div class="container">
+        <p>All rights reserved to <a href="www.projectbiped.com/prototypes/fobo">Project Biped</a> & Team Geeks. This website is developed for Robotics Project exhibition of <a href="http://itu.edu.pk/talha-rehmani/electronic-devices-circuits/">Electronic Devices & Circuits</a></p>
+		<p><a href="http://www.itu.edu.pk">Information Technology University, Lahore</a></p>
+		<p>Exclusively crafted by <a href="https://pk.linkedin.com/in/usamaabid">Usama Abid</a>, using Bootplus (built of twitter bootstrap).</p>
+		<p>Proudly hosted on <i class="icon-github"></i><a href="http://github.com/pages"> Github</a></p>
+      </div>
+    </footer>
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap-modal.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap-carousel.js"></script>
+    <script src="assets/js/bootstrap-typeahead.js"></script>
+    <script src="assets/js/bootstrap-affix.js"></script>
+
+    <script src="assets/js/holder/holder.js"></script>
+    <script src="assets/js/google-code-prettify/prettify.js"></script>
+
+    <script src="assets/js/application.js"></script>
+
+
+    <!-- Analytics
+    ================================================== -->
+
+  </body>
+</html>
